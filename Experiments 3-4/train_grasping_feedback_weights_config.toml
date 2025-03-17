@@ -1,0 +1,46 @@
+# This is an example TOML config for training the feedback weights
+TITLE = "Training Feedback Weights"
+TASK_NAME = 'feedback_conn_3_2PC_spec_targ_fixed_dist_PC2_fb_even_longer_bb_checkpoints/'
+
+RANDOM_SEED = 42                                                         # random seed for training
+DEVICE = 'cuda'
+
+DATA_DIR = '../Data/Jacquard_Train_Data_9600_preprocessed'
+TRAIN_VAL_SPLIT = 0.8
+
+###  Tensorbaord ###
+START_EPOCH = 1                                                           # epoch from which the training starts (especially for tensorboard)
+#SAVE_DIR='./tmp_train_feedback_conn_1'                                         # tensorboard logdir
+#TB_DIR =  'runs'       # dir_name
+#EXTRA_STR_YOU_WANT_TO_ADD_TO_TB = ''                                      # things you wish to note apart from the args in this file
+
+### Training ###
+PRETRAINED_MODEL = 'baseline_Even_Longer_Ranger_bs75_lr1e-2_ep9.pth' #'baseline_Longer_Ranger_bs75_lr1e-2_ep15.pth' #'baseline_Even_Longer_Ranger_bs75_lr1e-2_ep9.pth'
+BATCHSIZE = 1 #75 #4                                                         # batchsize for training
+NUM_WORKERS = 0                                                          # number of workers; to enable parallel processing for data-loading
+NUM_EPOCHS = 75                                                          # number of epochs
+
+### OPTIM ###
+OPTIM_NAME = 'SGD'                                                       # name of the optimizer to add to the tensorboard 
+LR = 0.01 #0.001                                                               # learning rate
+WEIGHT_DECAY = 0 #0.0005                                                    # weight decay
+CKPT_EVERY = false                                                       # checkpointing frequency  
+
+### SCHEDULER ###
+SCHEDULER = false
+SCHEDULER_STEPSIZE = false        
+SCHEDULER_GAMMA = false
+
+### Testing ###
+TEST_DATA_DIR = '../Data/Jacquard_Test_Data_2000_preprocessed'
+PCODER1_CKPT = 'pnet_pretrained_pc1_075.pth'                           
+PCODER2_CKPT = 'pnet_pretrained_pc2_075.pth'
+#PCODER3_CKPT = 'pnet_pretrained_pc3_075.pth'
+MAX_TIME_STEP = 15
+ADD_NOISE = true
+GAUSSIAN_NOISE_STD_DEV = 1.0                                          # additive noise level
+
+## Optionally resume from a checkpoint
+RESUME_TRAINING = false                                                           # resuming training  
+# if true above, then give a list of filenames (whose length is equal to the number of pcoders) to the resume checkpoints.
+RESUME_CKPTS= false               

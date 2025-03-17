@@ -1,0 +1,19 @@
+Meta_data:
+  MODE: test #train or test
+  DEVICE: cuda #computing device: cuda or cpu
+  RAW_TRAIN_DATA_DIR: ../Data/Jacquard_Train_Data_9600
+  TRAIN_DATA_DIR: ../Data/Jacquard_Train_Data_9600_preprocessed
+  RAW_TEST_DATA_DIR: ../Data/Jacquard_Test_Data_50
+  TEST_DATA_DIR: ../Data/Jacquard_Test_Data_50_preprocessed
+  IMG_DIM: 224 #input img dimensions are 244x244x3 by default
+  DATA_AUG: False #data augmentation by grasp label rotation 
+
+Training_data_baseline:
+  EPOCH: !!int 50
+  BATCH_SIZE: !!int 75
+  LR: !!float 0.001 #0.0001
+  TRAIN_VAL_SPLIT: !!float 0.8
+  WEIGHT_DECAY: !!float 0.00 #1e-6
+
+Testing_data_baseline:
+  BATCH_SIZE: !!int 75
