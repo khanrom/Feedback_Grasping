@@ -17,7 +17,13 @@ Seminal frameworks of predictive coding propose a hierarchy of generative module
    pip install torch torchvision numpy toml wandb
    ```
 ## Dataset
-
+1. Download the Jacquard Grasping Dataset: https://jacquard.liris.cnrs.fr/index.php
+2. Set the path to the raw and preprocessed data directories in `config.yaml`
+3. Preprocess the dataset:
+   ```
+   python preprocess.py
+   ```
+   
 ## Training
 
 ## Evaluation
