@@ -8,10 +8,10 @@ Seminal frameworks of predictive coding propose a hierarchy of generative module
 
 ## Installation
 1. Clone the Repository:
-```
-git clone https://github.com/khanrom/Feedback_Grasping.git
-cd Feedback_Grasping
-```
+   ```
+   git clone https://github.com/khanrom/Feedback_Grasping.git
+   cd Feedback_Grasping
+   ```
 2. Setup Python Environment: Ensure you have Python 3.x installed (the code was tested with Python 3 and PyTorch on an NVIDIA GPU). Install the required packages:
    ```
    pip install torch torchvision numpy toml wandb
