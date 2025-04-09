@@ -25,7 +25,9 @@ Seminal frameworks of predictive coding propose a hierarchy of generative module
    ```
    
 ## Training
-
+   ```
+   python train_grasping_baseline.py
+   ```
 ## Evaluation
 
 ## Citation
