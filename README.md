@@ -36,6 +36,7 @@ Seminal frameworks of predictive coding propose a hierarchy of generative module
    python train_grasping_feedback_model.py
    ```
 ## Evaluation
+Run
    ```
    python evaluate_feedback_model_loop_forStats_ExpX.py
    ```
