@@ -25,10 +25,20 @@ Seminal frameworks of predictive coding propose a hierarchy of generative module
    ```
    
 ## Training
+1. Train the feedforward on model on a supervised grasp detection task..
    ```
    python train_grasping_baseline.py
    ```
+2. Update the path to the feedback weights directory in `train_grasping_feedback_weights_config.toml`.
+3. Update the path to the feedback configuration module `grasping_pvgg16_XXX.py` in `train_grasping_feedback_model.py`.
+4. Train the feedback connections on an unsupervised reconstruction task.
+   ```
+   python train_grasping_feedback_model.py
+   ```
 ## Evaluation
+   ```
+   python evaluate_feedback_model_loop_forStats_ExpX.py
+   ```
 
 ## Citation
 If you use this code or otherwise build on this research, please cite the paper:
